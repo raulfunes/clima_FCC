@@ -1,0 +1,92 @@
+@import url("https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,200;0,300;0,400;0,600;0,700;1,200&family=Press+Start+2P&family=Roboto+Mono:wght@100;300;500;700&family=Rock+Salt&family=Source+Code+Pro&display=swap");
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+  font-family: "Kanit", sans-serif;
+}
+
+*, *::after, *::before {
+  box-sizing: inherit;
+}
+
+/* Titulos */
+h1 {
+  font-size: 4.2rem;
+}
+
+h2 {
+  font-size: 3.5rem;
+}
+
+h3 {
+  font-size: 3rem;
+}
+
+h4 {
+  font-size: 2.5rem;
+}
+
+h1, h2, h3, h4 {
+  margin: 1rem 0;
+}
+
+p {
+  margin: 1rem 0;
+  font-size: 1.6rem;
+}
+
+#clima-display {
+  width: 60rem;
+  margin: 0 auto;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+  background-color: #727273;
+  padding: 2rem;
+  display: grid;
+  grid-template-areas: "hora . temperatura img" "lugar . descripcion descripcion";
+  color: #F2F2F2;
+  user-select: none;
+}
+
+p, button {
+  margin: 0;
+  color: #F2F2F2;
+}
+
+#fecha {
+  grid-area: hora;
+  font-size: 6rem;
+}
+
+#lugar {
+  grid-area: lugar;
+  font-size: 3rem;
+  font-weight: 500;
+}
+
+#temperatura {
+  grid-area: temperatura;
+  background-color: transparent;
+  border: none;
+  font-size: 7rem;
+}
+
+#descripcion {
+  grid-area: descripcion;
+  font-size: 2rem;
+  justify-self: end;
+  align-self: end;
+}
+
+#imagen {
+  grid-area: img;
+  grid-row: 1;
+  width: 100%;
+  border-radius: 100%;
+  background-color: #c3c2c2;
+}
+
+/* Globales */
+/* Layout */
+
+/*# sourceMappingURL=app.css.map */

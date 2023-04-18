@@ -1,0 +1,60 @@
+@use '../globals/variables' as v;
+@use '../globals/mixins' as m;
+
+#clima-display{
+    width: 60rem;
+    margin: 0 auto;
+
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+
+    background-color: v.$gris;
+    padding: 2rem;
+
+    display: grid;
+
+    grid-template-areas: "hora . temperatura img"
+                "lugar . descripcion descripcion";
+    color: v.$blanco;
+
+    user-select: none;
+}
+
+p, button{
+    margin: 0;
+    color: v.$blanco;
+}
+
+
+#fecha{
+    grid-area: hora;
+    font-size: 6rem;
+}
+
+#lugar{
+    grid-area: lugar;
+    font-size: 3rem;
+    font-weight: 500;
+}
+
+#temperatura{
+    grid-area: temperatura;
+    background-color: transparent;
+    border: none;
+    font-size: 7rem;
+}
+
+#descripcion{
+    grid-area: descripcion;
+    font-size: 2rem;
+    justify-self: end;
+    align-self: end;
+}
+
+#imagen{
+    grid-area: img;
+    grid-row: 1;
+    width: 100%;
+    border-radius: 100%;
+    background-color: v.$grisOscuro;
+}
