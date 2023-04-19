@@ -1,14 +1,19 @@
 @use '../globals/variables' as v;
 @use '../globals/mixins' as m;
 
-#clima-display{
-    width: 60rem;
-    margin: 0 auto;
-
-    border-top-left-radius: 1rem;
+.imagen-fondo{
+    background: url(https://corporate.enelx.com/content/dam/global/detail-page/smart-city/hero-smart-city/hero-smart-city-desk.jpg);
+    background-position: center center;
+    background-repeat: no-repeat; 
+    max-width: 80rem;  
+        border-top-left-radius: 1rem;
     border-top-right-radius: 1rem;
+    margin: 0 auto;
+}
 
-    background-color: v.$gris;
+#clima-display{
+    width: 100%;
+    
     padding: 2rem;
 
     display: grid;
@@ -18,6 +23,8 @@
     color: v.$blanco;
 
     user-select: none;
+
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
 p, button{
@@ -41,7 +48,11 @@ p, button{
     grid-area: temperatura;
     background-color: transparent;
     border: none;
-    font-size: 7rem;
+    height: fit-content;
+    align-self: center;
+    justify-self: end;
+    width: 20rem;
+    font-size: 6.5rem;
 }
 
 #descripcion{
@@ -56,5 +67,4 @@ p, button{
     grid-row: 1;
     width: 100%;
     border-radius: 100%;
-    background-color: v.$grisOscuro;
 }

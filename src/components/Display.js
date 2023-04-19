@@ -19,18 +19,20 @@ export function Display({ estado, pais, clima, temperatura }) {
   }, 1000);
 
   return (
-    <div className="dia" id="clima-display">
-      <p id="fecha">{`${hours}:${minutes}`}</p>
-      <p id="lugar">{`${estado}, ${pais}`}</p>
-      <button id="temperatura" onClick={() => setCelcius(!celcius)}>
-        {celcius
-          ? Math.floor(temperatura.temp) + "ºC"
-          : Math.floor((temperatura.temp * 9) / 5 + 32) + "ºF"}
-      </button>
-      <p id="descripcion">
-        {clima.main}, {clima.description}
-      </p>
-      <img id="imagen" src={clima.icon} alt="" />
+    <div className="imagen-fondo">
+      <div className="dia" id="clima-display">
+        <p id="fecha">{`${hours}:${minutes}`}</p>
+        <p id="lugar">{`${estado}, ${pais}`}</p>
+        <button id="temperatura" onClick={() => setCelcius(!celcius)}>
+          {celcius
+            ? Math.floor(temperatura.temp) + "ºC"
+            : Math.floor((temperatura.temp * 9) / 5 + 32) + "ºF"}
+        </button>
+        <p id="descripcion">
+          {clima.main}, {clima.description}
+        </p>
+        <img id="imagen" src={clima.icon} alt="" />
+      </div>
     </div>
   );
 }
